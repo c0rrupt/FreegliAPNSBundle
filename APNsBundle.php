@@ -1,9 +1,9 @@
 <?php
 
-namespace Freegli\APNSBundle;
+namespace Freegli\Bundle\APNsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class FreegliAPNSBundle extends Bundle
+class APNsBundle extends Bundle
 {
 }
