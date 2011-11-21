@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Push notification service exemple</title>
+    </head>
+    <body>
+        <h1>Push notification service exemple</h1>
+        <h2>Results</h2>
+
+        <h3>
+            <strong>Tokens sent:</strong> {{ tokens|length }}
+        </h3>
+        <ol>
+        {% for id, token in tokens %}
+            <li>
+                <strong>{{ token }}</strong>: 
+            </li>
+        {% endfor %}
+        </ol>
+
+        <h3>
+            <strong>Errors:</strong> {{ errors|length }}
+        </h3>
+        <ol>
+        {% for error in errors %}
+            <li>
+                Token <strong>{{ tokens[error.identifier] }}</strong>:
+                status code <strong>{{ error.statusCode }}</strong>
+            </li>
+        {% endfor %}
+        </ol>
+
+    </body>
+</html>

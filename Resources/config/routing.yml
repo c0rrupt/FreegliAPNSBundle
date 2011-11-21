@@ -1,0 +1,7 @@
+freegli_apns_notification:
+    pattern:  /test/notification
+    defaults: { _controller: FreegliAPNSBundle:Test:notification }
+
+freegli_apns_feedback:
+    pattern:  /test/feedback
+    defaults: { _controller: FreegliAPNSBundle:Test:feedback }
