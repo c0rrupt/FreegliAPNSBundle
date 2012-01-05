@@ -37,7 +37,7 @@ The following example use *certs* subdirectory including *dev_apns_cert.pem* and
 
 [parameters]
 	freegli.apns.connection_factory.certificat_path = %kernel.root_dir%/../certs/%kernel.environment%_apns_cert.pem
-	# freegli.apns.connection_factory.certificat_passphrase = 
+	freegli.apns.connection_factory.certificat_passphrase = 
 
 
 Sample code
