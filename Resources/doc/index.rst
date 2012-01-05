@@ -19,7 +19,7 @@ Configuration
 
 You can include this code in your *deps* file.
 
-.. code-block::
+.. code-block:: ini
 
 
 [FreegliAPNSBundle]
@@ -32,7 +32,7 @@ You can include this code in your *deps* file.
 You need to specify your certificate path into parameters.
 The following example use *certs* subdirectory including *dev_apns_cert.pem* and *prod_apns_cert.pem*, without passphrase.
 
-.. code-block::
+.. code-block:: ini
 
 
 [parameters]
