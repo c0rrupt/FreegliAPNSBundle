@@ -19,22 +19,27 @@ Configuration
 
 You can include this code in your *deps* file.
 
-``
+::
+
+
 [FreegliAPNSBundle]
 	git=git://github.com/Freegli/FreegliAPNSBundle.git
-	target=bundles/Freegli/Bundle/APNSBundle	
+	target=bundles/Freegli/Bundle/APNSBundle
+		
 [FreegliAPNs]
 	git=git://github.com/Freegli/APNs.git
-``
+
 
 You need to specify your certificate path into parameters.
 The following example use *certs* subdirectory including *dev_apns_cert.pem* and *prod_apns_cert.pem*, without passphrase.
 
-``
+.. code-block:: ini
+
+
 [parameters]
 	freegli.apns.connection_factory.certificat_path = %kernel.root_dir%/../certs/%kernel.environment%_apns_cert.pem
 	freegli.apns.connection_factory.certificat_passphrase = 
-``
+
 
 Sample code
 -----------
@@ -47,7 +52,8 @@ Freegli APNs component require an hexadecimal string representation. Its length 
 
 Here is a sample code to obtain hexadecimal representation of NSData in your Objective-C project.
 
-``
+.. code-block:: objective-c
+
 
 @implementation NSData (HexadecimalRepresentation)
 
@@ -74,7 +80,7 @@ Here is a sample code to obtain hexadecimal representation of NSData in your Obj
 
 @end
 
-``
+
 
 Resources
 =========
