@@ -21,14 +21,12 @@ You can include this code in your *deps* file.
 
 ::
 
-
-[FreegliAPNSBundle]
-	git=git://github.com/Freegli/FreegliAPNSBundle.git
-	target=bundles/Freegli/Bundle/APNSBundle
+	[FreegliAPNSBundle]
+		git=git://github.com/Freegli/FreegliAPNSBundle.git
+		target=bundles/Freegli/Bundle/APNSBundle
 		
-[FreegliAPNs]
-	git=git://github.com/Freegli/APNs.git
-
+	[FreegliAPNs]
+		git=git://github.com/Freegli/APNs.git
 
 You need to specify your certificate path into parameters.
 The following example use *certs* subdirectory including *dev_apns_cert.pem* and *prod_apns_cert.pem*, without passphrase.
