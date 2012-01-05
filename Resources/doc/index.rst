@@ -31,7 +31,7 @@ You can include this code in your *deps* file.
 You need to specify your certificate path into parameters.
 The following example use *certs* subdirectory including *dev_apns_cert.pem* and *prod_apns_cert.pem*, without passphrase.
 
-.. code-block:: ini
+:: ini
 
 	[parameters]
 		freegli.apns.connection_factory.certificat_path = %kernel.root_dir%/../certs/%kernel.environment%_apns_cert.pem
