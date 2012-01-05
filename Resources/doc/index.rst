@@ -49,6 +49,38 @@ Tokens
 Binary tokens length is 32.
 Freegli APNs component require an hexadecimal string representation. Its length is 64 (32 * 2).
 
+Here is a sample code to obtain hexadecimal representation of NSData in your Objective-C project.
+
+.. code-block:: objective-c
+
+
+@implementation NSData (HexadecimalRepresentation)
+
+- (NSString *)hexadecimalRepresentation {
+    static const char hexValues[] = "0123456789abcdef";
+    const size_t len = [self length];
+    const unsigned char *data = [self bytes];
+    char *buffer = (char *)calloc(len * 2 + 1, sizeof(char));
+    char *hex = buffer;
+    NSString *hexBytes = nil;
+    
+    for (int i = 0; i < len; i++) {
+        const unsigned char c = data[i];
+        *hex++ = hexValues[(c >> 4) & 0xF];
+        *hex++ = hexValues[(c ) & 0xF];
+    }
+    
+    hexBytes = [NSString stringWithUTF8String:buffer];
+    
+    free(buffer);
+    
+    return hexBytes;
+}
+
+@end
+
+
+
 Resources
 =========
 
